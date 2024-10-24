@@ -7,15 +7,14 @@ public class Main {
         MenuItem[0]=new MenuItem("Vegetable salad","Abundant vegetables and salad dressing.",12);
         MenuItem[1]=new MenuItem("Super Chicken","Grilled chicken breast topped with aromatic spices and vegetable.",15);
         MenuItem[2]=new MenuItem("BBQ Bacon Hamburger","A juicy beef pie in black pepper sauce and topped with crispy bacon bits.",13);
+        System.out.println("Welcome to order food");
         for(int i = 0; i < MenuItem.length ; i++){
-            System.out.print("Welcome to order food");
-            System.out.println(i+1+". "+MenuItem[i].getName());
-            System.out.println("Price is" + MenuItem[i].getPrice());
+            System.out.println((i+1) +". "+MenuItem[i].getName());
+            System.out.println("Price is:" + MenuItem[i].getPrice());
         }
-
-       System.out.println("Please enter the order item number:");
-    Scanner scanner = new Scanner(System.in);
-    float menuId = scanner.nextFloat();
+        System.out.println("Please enter the order item number:");
+        Scanner scanner = new Scanner(System.in);
+        float menuId = scanner.nextFloat();
 
         System.out.println("Your choice is " + MenuItem[(int)menuId - 1].getName() );
         if (menuId == 1) {
