@@ -19,11 +19,11 @@ public class Main {
             MenuItem[0] = new MenuItem("Vegetable salad", "Abundant vegetables and salad dressing.", 12);
             MenuItem[1] = new MenuItem("Super Chicken", "Grilled chicken breast topped with aromatic spices and vegetable.", 15);
             MenuItem[2] = new MenuItem("BBQ Bacon Hamburger", "A juicy beef pie in black pepper sauce and topped with crispy bacon bits.", 13);
-            System.out.println("Please enter the order item number:");
             System.out.println(i + 1 + ". " + MenuItem[i].getName());
             System.out.println(MenuItem[i].getDescription());
             System.out.println("price : " + MenuItem[i].getPrice());
         }
+        System.out.println("Please enter the order item number:");
     }
 
 
@@ -35,7 +35,6 @@ public class Main {
         MenuItem[0] = new MenuItem("Vegetable salad", "Abundant vegetables and salad dressing.", 12);
         MenuItem[1] = new MenuItem("Super Chicken", "Grilled chicken breast topped with aromatic spices and vegetable.", 15);
         MenuItem[2] = new MenuItem("BBQ Bacon Hamburger", "A juicy beef pie in black pepper sauce and topped with crispy bacon bits.", 13);
-        System.out.println("Please enter the order item number:");
         Scanner scanner = new Scanner(System.in);
         float menuId = scanner.nextFloat();
         while (menuId > 3) {
