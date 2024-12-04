@@ -6,9 +6,9 @@ public class MenuItem {
             new MenuItem("Vegetable salad", "Abundant vegetables and salad dressing.", 12),
             new MenuItem("Super Chicken", "Grilled chicken breast topped with aromatic spices and vegetable.", 15),
             new MenuItem("BBQ Bacon Hamburger", "A juicy beef pie in black pepper sauce and topped with crispy bacon bits.", 13)
-     };
+    };
 
-    public MenuItem(String name, String description, int price){
+    public MenuItem(String name, String description, int price) {
         this.name = name;
         this.description = description;
         this.price = price;
