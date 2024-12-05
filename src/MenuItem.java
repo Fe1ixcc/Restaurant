@@ -1,7 +1,9 @@
 public class MenuItem {
+
     public String name;
     public String description;
     public int price;
+
     public static MenuItem[] menu = {
             new MenuItem("Vegetable salad", "Abundant vegetables and salad dressing.", 12),
             new MenuItem("Super Chicken", "Grilled chicken breast topped with aromatic spices and vegetable.", 15),
@@ -12,7 +14,6 @@ public class MenuItem {
         this.name = name;
         this.description = description;
         this.price = price;
-
     }
 
     public String getName() {
