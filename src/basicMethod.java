@@ -15,7 +15,7 @@ public class basicMethod {
     public void interactiveSystem() {
 
         Scanner scanner = new Scanner(System.in);
-        String answer = "";
+        String answer;
 
         do{
             float menuId = scanner.nextFloat();
@@ -36,6 +36,7 @@ public class basicMethod {
 
                 if (num1 >= 50) {
                     System.out.println("You have already spent over 50, you will receive a 20% discount");
+                    num1 = (int) (num1 * 0.8);
                     System.out.println("The total price is " + num1);
                 }
 
@@ -44,7 +45,6 @@ public class basicMethod {
 
                 if (answer.equals("yes")){
                     System.out.println("Please enter the order item number:");
-                    continue;
                 } else break;
             }
         }while(true);
