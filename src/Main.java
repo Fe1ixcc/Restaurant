@@ -20,7 +20,6 @@ public class Main {
             stuff.stuffMethod();
         }
         if(choice == 2){
-            consumer.menuPrint();
             consumer.interactiveSystem();
         }
         else {
