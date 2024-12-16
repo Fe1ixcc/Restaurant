@@ -14,12 +14,16 @@ public class Main {
            """);
 
         int choice = scanner.nextInt();
+        priceScreening priceScreening =new priceScreening();
+
 
         if(choice == 1){
             stuff.stuffMethod();
         }
-        if(choice == 2){
+        else if(choice == 2){
+            priceScreening.Print();
             consumer.interactiveSystem();
+
         }
         else {
             System.out.println("Wrong apply.");
