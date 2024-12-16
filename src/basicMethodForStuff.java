@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class basicMethodForStuff {
+    Scanner scanner = new Scanner(System.in);
     public void stuffMethod() {
         System.out.println("""
                 What do you want to do next?
@@ -11,15 +12,12 @@ public class basicMethodForStuff {
                 0)exit
                 """);
         Scanner scanner = new Scanner(System.in);
-        int priceScreening = scanner.nextInt();
-
-        switch (priceScreening) {
-            case 1:
-                menuPrint();
-            case 2:
-                addDish();
-            case 3:
-                break;
+        int choice = scanner.nextInt();
+        if(choice == 1){
+            menuPrint();
+        }
+        if(choice == 2){
+            addDish ();
         }
     }
         public void addDish () {
