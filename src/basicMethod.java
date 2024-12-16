@@ -50,5 +50,26 @@ public class basicMethod {
             }
         } while (answer.equals("yes"));
         System.out.println("The final total price is " + totalPrice);
+
+        System.out.println("Please select the payment method:");
+        System.out.println("1. Alipay");
+        System.out.println("2. Credit card");
+        System.out.println("3. WeChat Pay");
+        int paymentMethod = scanner.nextInt();
+        switch (paymentMethod) {
+            case 1:
+                System.out.println("Alipay payment");
+                break;
+            case 2:
+                System.out.println("Credit card payment");
+                break;
+            case 3:
+                System.out.println("WeChat Pay payment");
+                break;
+            default:
+                System.out.println("Invalid payment method");
+                break;
+        }
+        System.out.println("Thank you for using our service");
     }
 }

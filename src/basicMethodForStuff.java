@@ -18,6 +18,7 @@ public class basicMethodForStuff {
                 menuPrint();
             case 2:
                 addDish();
+            case 3:
                 break;
         }
     }

@@ -23,7 +23,6 @@ public class Main {
         else if(choice == 2){
             priceScreening.Print();
             consumer.interactiveSystem();
-
         }
         else {
             System.out.println("Wrong apply.");
