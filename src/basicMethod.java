@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class basicMethod {
 
-    public void menuPrint() {
+    public static void menuPrint() {
         System.out.println("Welcome to order food");
         for (int i = 0; i < MenuItem.menu.length; i++) {
             System.out.println((i + 1) + ". " + MenuItem.menu[i].getName());
@@ -12,7 +12,7 @@ public class basicMethod {
         System.out.println("Please enter the order item number:");
     }
 
-    public void interactiveSystem() {
+    public static void interactiveSystem() {
 
         float totalPrice = 0;
         Scanner scanner = new Scanner(System.in);

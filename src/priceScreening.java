@@ -17,5 +17,4 @@ public class priceScreening {
             System.out.println(" We recommend Vegetable salad , Super Chicken and BBQ Bacon Hamburger to you.");
         }
     }
-
 }
