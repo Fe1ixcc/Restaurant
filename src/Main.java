@@ -16,7 +16,6 @@ public class Main {
         int choice = scanner.nextInt();
         priceScreening priceScreening =new priceScreening();
 
-
         if(choice == 1){
             stuff.stuffMethod();
         }

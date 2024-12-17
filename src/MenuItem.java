@@ -16,6 +16,15 @@ public class MenuItem {
         this.price = price;
     }
 
+    public static void addMenuItem(MenuItem newItem) {
+        MenuItem[] newMenu = new MenuItem[menu.length + 1];
+        for (int i = 0; i < menu.length; i++) {
+            newMenu[i] = menu[i];
+        }
+        newMenu[menu.length] = newItem;
+        menu = newMenu;
+    }
+
     public String getName() {
         return name;
     }
