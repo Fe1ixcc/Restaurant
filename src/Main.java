@@ -13,12 +13,11 @@ public class Main {
            """);
 
         int choice = scanner.nextInt();
-        priceScreening priceScreening =new priceScreening();
 
         switch (choice){
             case 1-> stuff.stuffMethod();
             case 2 -> {
-                priceScreening.Print();
+                basicMethod.Print();
                 basicMethod.interactiveSystem();
             }
             default -> System.out.println("Invalid option entered"+choice);
