@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         basicMethodForStuff stuff = new basicMethodForStuff();
-        basicMethod consumer = new basicMethod();
 
         System.out.println("""
            Welcome to the restaurant system!
@@ -16,15 +15,13 @@ public class Main {
         int choice = scanner.nextInt();
         priceScreening priceScreening =new priceScreening();
 
-        if(choice == 1){
-            stuff.stuffMethod();
-        }
-        else if(choice == 2){
-            priceScreening.Print();
-            consumer.interactiveSystem();
-        }
-        else {
-            System.out.println("Wrong apply.");
+        switch (choice){
+            case 1-> stuff.stuffMethod();
+            case 2 -> {
+                priceScreening.Print();
+                basicMethod.interactiveSystem();
+            }
+            default -> System.out.println("Invalid option entered"+choice);
         }
     }
 }

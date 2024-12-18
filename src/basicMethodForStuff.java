@@ -9,10 +9,10 @@ public class basicMethodForStuff {
             System.out.println("""
                 What do you want to do next?
                 1)List menu;
-                2)Add dishes:
-                3)
-                4)
-                0)exit
+                2)Add dishes;
+                3)Delete dishes;
+                4)Print the menu;
+                0)exit.
                 """);
             choice = scanner.nextInt();
             if(choice == 1){
@@ -21,13 +21,16 @@ public class basicMethodForStuff {
             if(choice == 2){
                 addDish ();
             }
+            if(choice == 3){
+                deleteDish();
+            }
             System.out.println("Continue operating(yes/no)?");
             option = scanner.next();
         }while (option.equals("yes"));
     }
     public void addDish () {
-        System.out.println("What do you want to add?");
         Scanner scanner = new Scanner(System.in);
+        System.out.println("What do you want to add?");
         String name = scanner.nextLine();
         System.out.println("What is the description?");
         String description = scanner.nextLine();
@@ -36,6 +39,12 @@ public class basicMethodForStuff {
         MenuItem newFood = new MenuItem(name, description, price);
         MenuItem.addMenuItem(newFood);
         System.out.println("Added successfully");
+    }
+    public void deleteDish(){
+        System.out.println("Which one do you want to delete?");
+        MenuItem newMenu = null;
+        MenuItem.deleteMenuItem(newMenu);
+        System.out.println("Deleted successfully");
     }
     public void menuPrint () {
         System.out.println("Welcome to order food");

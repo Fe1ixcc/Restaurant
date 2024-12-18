@@ -51,10 +51,12 @@ public class basicMethod {
         } while (answer.equals("yes"));
         System.out.println("The final total price is " + totalPrice);
 
-        System.out.println("Please select the payment method （1/2/3）:");
-        System.out.println("1. Alipay");
-        System.out.println("2. Credit card");
-        System.out.println("3. WeChat Pay");
+        System.out.println("""
+                "Please select the payment method （1/2/3）:
+                1. Alipay
+                2. Credit card
+                3. WeChat Pay
+                """);
         int paymentMethod = scanner.nextInt();
         switch (paymentMethod) {
             case 1:

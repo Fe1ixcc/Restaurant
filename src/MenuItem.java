@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MenuItem {
 
     public String name;
@@ -24,7 +26,19 @@ public class MenuItem {
         newMenu[menu.length] = newItem;
         menu = newMenu;
     }
-
+    public static void deleteMenuItem(MenuItem newItem){
+        Scanner scanner = new Scanner(System.in);
+        MenuItem[] newMenu = new MenuItem[menu.length - 1];
+        int menuNumber = scanner.nextInt();
+        for (int i = 0; i < menuNumber; i++) {
+            newMenu[i] = menu[i];
+        }
+        for (int i = menuNumber; i < menu.length - 1; i++) {
+            newMenu[i] = menu[i + 1];
+        }
+        newMenu[menu.length - 1] = newItem;
+        menu = newMenu;
+    }
     public String getName() {
         return name;
     }
