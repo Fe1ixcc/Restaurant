@@ -7,20 +7,14 @@ public class basicMethod {
     * printing the details of each menu item. Finally, it prompts the user to enter the order item number.
     */
     public static void menuPrint() {
-    // Print the welcome message
     System.out.println("Welcome to order food");
 
     // Iterate through the menu items array and print each menu item's information
     for (int i = 0; i < MenuItem.menu.length; i++) {
-        // Print the menu item's number and name
         System.out.println((i + 1) + ". " + MenuItem.menu[i].getName());
-        // Print the menu item's description
         System.out.println(MenuItem.menu[i].getDescription());
-        // Print the menu item's price
         System.out.println(MenuItem.menu[i].getPrice() + "$");
     }
-
-    // Prompt the user to enter the order item number
     System.out.println("Please enter the order item number:");
 }
 
@@ -31,11 +25,8 @@ public class basicMethod {
      * It uses console input to read the user's budget and provides different recommendations depending on the budget range.
      */
     public static void Print() {
-    // Prompt the user to enter their budget
     System.out.println("What is your budget ?");
-    // Create a Scanner object to read user input
     Scanner scanner = new Scanner(System.in);
-    // Read the user's budget
     float Budget = scanner.nextInt();
 
     // Provide recommendations based on the user's budget
@@ -73,7 +64,6 @@ public class basicMethod {
 
     // Start the do-while loop to allow users to continue ordering until they choose to stop
     do {
-        // Call the method to display the menu
         menuPrint();
         // Get the user's menu selection
         float menuId = scanner.nextFloat();
@@ -114,7 +104,6 @@ public class basicMethod {
             answer = scanner.next();
         }
     } while (answer.equals("yes"));
-    // Display the final total price
     System.out.println("The final total price is " + totalPrice);
 
     // Prompt the user to select a payment method
@@ -141,7 +130,6 @@ public class basicMethod {
             System.out.println("Invalid payment method");
             break;
     }
-    // Display a "thank you" message
     System.out.println("Thank you for using our service");
   }
 }

@@ -20,35 +20,35 @@ class basicMethodTest {
      * Sets up the test environment before each test method is executed.
      * This method redirects the system output and input streams to facilitate testing.
      */
-@BeforeEach
-public void setUp() {
-    // Redirects system output to a local variable to capture output during tests
-    System.setOut(new PrintStream(outContent));
+    @BeforeEach
+    public void setUp() {
+        // Redirects system output to a local variable to capture output during tests
+        System.setOut(new PrintStream(outContent));
 
-    // Creates a ByteArrayInputStream object to simulate system input
-    // This allows providing input data for tests without manual intervention
-    ByteArrayInputStream textInput = new ByteArrayInputStream("3\n10\nnyes\n".getBytes());
-    System.setIn(textInput);
-    scanner = new Scanner(System.in);
-}
+        // Creates a ByteArrayInputStream object to simulate system input
+        // This allows providing input data for tests without manual intervention
+        ByteArrayInputStream textInput = new ByteArrayInputStream("3\n10\nnyes\n".getBytes());
+        System.setIn(textInput);
+        scanner = new Scanner(System.in);
+    }
 
 
     /*
      * Test the menu print functionality to verify that the menu items are displayed correctly.
      */
-@Test
-public void testMenuPrint() {
-    // Call the menuPrint method to display the menu
-    basicMethod.menuPrint();
-    // Initialize Assertions object (Note: This line seems incorrect as it assigns null to an Assertions object)
+    @Test
+    public void testMenuPrint() {
+        // Call the menuPrint method to display the menu
+        basicMethod.menuPrint();
+        // Initialize Assertions object (Note: This line seems incorrect as it assigns null to an Assertions object)
 
-    // Assert that the output contains the name of the first menu item
-    Assertions.assertTrue(outContent.toString().contains("1. " + MenuItem.menu[0].getName()));
-    // Assert that the output contains the description of the first menu item
-    Assertions.assertTrue(outContent.toString().contains(MenuItem.menu[0].getDescription()));
-    // Assert that the output contains the price of the first menu item followed by a dollar sign
-    Assertions.assertTrue(outContent.toString().contains(MenuItem.menu[0].getPrice() + "$"));
-}
+        // Assert that the output contains the name of the first menu item
+        Assertions.assertTrue(outContent.toString().contains("1. " + MenuItem.menu[0].getName()));
+        // Assert that the output contains the description of the first menu item
+        Assertions.assertTrue(outContent.toString().contains(MenuItem.menu[0].getDescription()));
+        // Assert that the output contains the price of the first menu item followed by a dollar sign
+        Assertions.assertTrue(outContent.toString().contains(MenuItem.menu[0].getPrice() + "$"));
+    }
 
     /*
      * Tests the interactiveSystem method with a sequence of user inputs.
@@ -72,27 +72,26 @@ public void testMenuPrint() {
      * This test case verifies that the interactiveSystem method correctly handles and exits when a non-positive number is entered.
      * It simulates user input by providing a negative number followed by a non-numeric response to test the method's behavior.
      */
-@Test
-public void testInteractiveSystem_NonPositiveNumber_Exit() {
-    // Simulate user input: first enter a negative number
-    String input = "-5\nno\n";
-    ByteArrayInputStream testInput = new ByteArrayInputStream(input.getBytes());
-    System.setIn(testInput);
+    @Test
+    public void testInteractiveSystem_NonPositiveNumber_Exit() {
+        // Simulate user input: first enter a negative number
+        String input = "-5\nno\n";
+        ByteArrayInputStream testInput = new ByteArrayInputStream(input.getBytes());
+        System.setIn(testInput);
 
-    // Call the interactiveSystem method
-    basicMethod.interactiveSystem();
-}
+        // Call the interactiveSystem method
+        basicMethod.interactiveSystem();
+    }
     /*
      * Tears down the test environment after each test method execution.
      * This method resets the system input and output streams, closes the scanner,
      * and clears the output content.
      */
-@AfterEach
-public void tearDown() {
-    System.setIn(originalInput);
-    scanner.close();
-    System.setOut(originalOut);
-    outContent.reset();
-}
-
+    @AfterEach
+    public void tearDown() {
+        System.setIn(originalInput);
+        scanner.close();
+        System.setOut(originalOut);
+        outContent.reset();
+    }
 }

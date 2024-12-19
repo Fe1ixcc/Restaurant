@@ -25,22 +25,20 @@ public class MenuItem {
      * This method creates a new array with one less element and copies all items except the one to be deleted.
      * @param newItem The MenuItem object to be deleted from the menu.
      */
-public static void deleteMenuItem(MenuItem newItem) {
-    MenuItem[] newMenu = new MenuItem[menu.length - 1];
-    int newIndex = 0;
+    public static void deleteMenuItem(MenuItem newItem) {
+        MenuItem[] newMenu = new MenuItem[menu.length - 1];
+        int newIndex = 0;
 
-    // Iterate through the current menu array
-    for (int i = 0; i < menu.length; i++) {
-        // Copy the current item to the new array if it is not the item to be deleted
-        if (menu[i] != null && !menu[i].getName().equals(newItem.getName())) {
-            newMenu[newIndex++] = menu[i];
+        // Iterate through the current menu array
+        for (int i = 0; i < menu.length; i++) {
+            // Copy the current item to the new array if it is not the item to be deleted
+            if (menu[i] != null && !menu[i].getName().equals(newItem.getName())) {
+                newMenu[newIndex++] = menu[i];
         }
     }
-
-    // Update the menu array with the new array
     menu = newMenu;
     System.out.println("The menu has been updated.");
-}
+    }
 
     /*
      * Adds a new menu item to the existing menu.
@@ -50,18 +48,18 @@ public static void deleteMenuItem(MenuItem newItem) {
      * has been updated.
      * @param newItem The new MenuItem object to be added to the menu.
      */
-public static void addMenuItem(MenuItem newItem) {
-    MenuItem[] newMenu = new MenuItem[menu.length + 1]; // Create a new array with increased size
-    for (int i = 0; i < menu.length; i++) {
-        newMenu[i] = menu[i]; // Copy existing menu items to the new array
+    public static void addMenuItem(MenuItem newItem) {
+        MenuItem[] newMenu = new MenuItem[menu.length + 1]; // Create a new array with increased size
+        for (int i = 0; i < menu.length; i++) {
+            newMenu[i] = menu[i]; // Copy existing menu items to the new array
+        }
+        newMenu[menu.length] = newItem; // Add the new menu item at the end of the new array
+        for (int i = 0; i < newMenu.length; i++) {
+            newMenu[i] = new MenuItem(newMenu[i].getName(), newMenu[i].getDescription(), newMenu[i].getPrice()); // Reinitialize each MenuItem in the new array
+        }
+        System.out.println("The menu has been updated."); // Print update confirmation
+        menu = newMenu; // Update the reference to the new menu array
     }
-    newMenu[menu.length] = newItem; // Add the new menu item at the end of the new array
-    for (int i = 0; i < newMenu.length; i++) {
-        newMenu[i] = new MenuItem(newMenu[i].getName(), newMenu[i].getDescription(), newMenu[i].getPrice()); // Reinitialize each MenuItem in the new array
-    }
-    System.out.println("The menu has been updated."); // Print update confirmation
-    menu = newMenu; // Update the reference to the new menu array
-}
 
     public String getName() {
         return name;
