@@ -17,9 +17,9 @@ class basicMethodTest {
     InputStream originalInput = System.in;
 
     /*
-    Sets up the test environment before each test method is executed.
-    This method redirects the system output and input streams to facilitate testing.
-    */
+     * Sets up the test environment before each test method is executed.
+     * This method redirects the system output and input streams to facilitate testing.
+     */
 @BeforeEach
 public void setUp() {
     // Redirects system output to a local variable to capture output during tests
@@ -34,8 +34,8 @@ public void setUp() {
 
 
     /*
-    Test the menu print functionality to verify that the menu items are displayed correctly.
-    */
+     * Test the menu print functionality to verify that the menu items are displayed correctly.
+     */
 @Test
 public void testMenuPrint() {
     // Call the menuPrint method to display the menu
@@ -51,10 +51,10 @@ public void testMenuPrint() {
 }
 
     /*
-    Tests the interactiveSystem method with a sequence of user inputs.
-    This test case verifies that when the user inputs positive numbers and confirms the operation,
-    the system behaves as expected.
-    */
+     * Tests the interactiveSystem method with a sequence of user inputs.
+     * This test case verifies that when the user inputs positive numbers and confirms the operation,
+     * the system behaves as expected.
+     */
     @Test
     public void testInteractiveSystem_PositiveNumber_Continue() {
         // Simulate user input with positive numbers followed by confirmation
@@ -68,10 +68,10 @@ public void testMenuPrint() {
 
 
     /*
-    Tests the interactiveSystem method with a non-positive number input.
-    This test case verifies that the interactiveSystem method correctly handles and exits when a non-positive number is entered.
-    It simulates user input by providing a negative number followed by a non-numeric response to test the method's behavior.
-    */
+     * Tests the interactiveSystem method with a non-positive number input.
+     * This test case verifies that the interactiveSystem method correctly handles and exits when a non-positive number is entered.
+     * It simulates user input by providing a negative number followed by a non-numeric response to test the method's behavior.
+     */
 @Test
 public void testInteractiveSystem_NonPositiveNumber_Exit() {
     // Simulate user input: first enter a negative number
@@ -83,10 +83,10 @@ public void testInteractiveSystem_NonPositiveNumber_Exit() {
     basicMethod.interactiveSystem();
 }
     /*
-    Tears down the test environment after each test method execution.
-    This method resets the system input and output streams, closes the scanner,
-    and clears the output content.
-    */
+     * Tears down the test environment after each test method execution.
+     * This method resets the system input and output streams, closes the scanner,
+     * and clears the output content.
+     */
 @AfterEach
 public void tearDown() {
     System.setIn(originalInput);

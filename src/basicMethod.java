@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class basicMethod {
    /*
-   Prints the menu options.
-   This method displays a welcome message, then iterates through a predefined array of menu items,
-   printing the details of each menu item. Finally, it prompts the user to enter the order item number.
-   */
+    * Prints the menu options.
+    * This method displays a welcome message, then iterates through a predefined array of menu items,
+    * printing the details of each menu item. Finally, it prompts the user to enter the order item number.
+    */
     public static void menuPrint() {
     // Print the welcome message
     System.out.println("Welcome to order food");
@@ -26,10 +26,10 @@ public class basicMethod {
 
 
     /*
-     Prints menu recommendations based on the user's budget.
-     This method prompts the user for their budget and recommends menu items based on predefined prices.
-     It uses console input to read the user's budget and provides different recommendations depending on the budget range.
-    */
+     * Prints menu recommendations based on the user's budget.
+     * This method prompts the user for their budget and recommends menu items based on predefined prices.
+     * It uses console input to read the user's budget and provides different recommendations depending on the budget range.
+     */
     public static void Print() {
     // Prompt the user to enter their budget
     System.out.println("What is your budget ?");
@@ -59,9 +59,9 @@ public class basicMethod {
 
 
     /*
-    This method implements an interactive ordering system.
-    It displays the menu, handles user orders, calculates the total price, and processes the payment method.
-   */
+     * This method implements an interactive ordering system.
+     * It displays the menu, handles user orders, calculates the total price, and processes the payment method.
+     */
     public static void interactiveSystem() {
 
     // Initialize total price to 0

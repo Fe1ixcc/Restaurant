@@ -21,10 +21,10 @@ public class MenuItem {
     }
 
     /*
-    Deletes a menu item from the menu array.
-    This method creates a new array with one less element and copies all items except the one to be deleted.
-    @param newItem The MenuItem object to be deleted from the menu.
-    */
+     * Deletes a menu item from the menu array.
+     * This method creates a new array with one less element and copies all items except the one to be deleted.
+     * @param newItem The MenuItem object to be deleted from the menu.
+     */
 public static void deleteMenuItem(MenuItem newItem) {
     MenuItem[] newMenu = new MenuItem[menu.length - 1];
     int newIndex = 0;
@@ -43,13 +43,13 @@ public static void deleteMenuItem(MenuItem newItem) {
 }
 
     /*
-    Adds a new menu item to the existing menu.
-    This method creates a new array of MenuItems with a length one greater than the current menu array,
-    copies all existing items into this new array, adds the new item at the end, and then reassigns the
-    original menu reference to point to this new array. It also prints a message indicating that the menu
-    has been updated.
-    @param newItem The new MenuItem object to be added to the menu.
-    */
+     * Adds a new menu item to the existing menu.
+     * This method creates a new array of MenuItems with a length one greater than the current menu array,
+     * copies all existing items into this new array, adds the new item at the end, and then reassigns the
+     * original menu reference to point to this new array. It also prints a message indicating that the menu
+     * has been updated.
+     * @param newItem The new MenuItem object to be added to the menu.
+     */
 public static void addMenuItem(MenuItem newItem) {
     MenuItem[] newMenu = new MenuItem[menu.length + 1]; // Create a new array with increased size
     for (int i = 0; i < menu.length; i++) {

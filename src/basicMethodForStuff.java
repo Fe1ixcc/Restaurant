@@ -8,9 +8,9 @@ public class basicMethodForStuff {
     Scanner scanner = new Scanner(System.in);
 
     /*
-    Displays the interactive menu for the user to choose the next operation
-    This method provides options for the user to list the menu, add, delete dishes, print the menu, or exit
-    It uses a do-while loop to allow the user to repeatedly operate until they choose to exit
+     * Displays the interactive menu for the user to choose the next operation
+     * This method provides options for the user to list the menu, add, delete dishes, print the menu, or exit
+     * It uses a do-while loop to allow the user to repeatedly operate until they choose to exit
      */
     public void stuffMethod() {
         // Initialize the option variable to control the loop
@@ -54,12 +54,12 @@ public class basicMethodForStuff {
     }
 
     /*
-    Adds a dish to the menu.
-    This method prompts the user to input details about a new dish, including its name,
-    description, and price. It then creates a new MenuItem object with this information
-    and adds it to the menu. Finally, it prints a success message indicating that the dish
-    has been added.
-    */
+     * Adds a dish to the menu.
+     * This method prompts the user to input details about a new dish, including its name,
+     * description, and price. It then creates a new MenuItem object with this information
+     * and adds it to the menu. Finally, it prints a success message indicating that the dish
+     * has been added.
+     */
 public void addDish() {
     // Create a Scanner object to read user input
     Scanner scanner = new Scanner(System.in);
@@ -87,8 +87,8 @@ public void addDish() {
 }
 
     /*
-    Deletes a dish from the menu.
-    This method reads the dish number to be deleted from the user input and performs the deletion operation.
+     * Deletes a dish from the menu.
+     * This method reads the dish number to be deleted from the user input and performs the deletion operation.
      */
     public void deleteDish() {
         // Create a Scanner object for reading user input
@@ -110,10 +110,10 @@ public void addDish() {
     }
 
     /*
-    Prints the menu options.
-    This method iterates through the menu items array and outputs the details of each menu item,
-    including its number, name, description, and price.
-    */
+     * Prints the menu options.
+     * This method iterates through the menu items array and outputs the details of each menu item,
+     * including its number, name, description, and price.
+     */
 public void menuPrint() {
     // Print the welcome message for ordering food
     System.out.println("Welcome to order food");
@@ -129,10 +129,10 @@ public void menuPrint() {
 }
 
     /*
-    Prints the menu by writing the details of each menu item into a text file
-    This method covers the process of file path acquisition, file writing, and outputting the file location
-    @throws IOException If an I/O error occurs while writing to the file
-    */
+     * Prints the menu by writing the details of each menu item into a text file
+     * This method covers the process of file path acquisition, file writing, and outputting the file location
+     * @throws IOException If an I/O error occurs while writing to the file
+     */
 public void printMenu() throws IOException {
     // Get the current working directory
     String currentDir = System.getProperty("user.dir");
