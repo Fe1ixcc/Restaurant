@@ -6,6 +6,7 @@ public class Main {
     basicMethodForStuff stuff = new basicMethodForStuff();
 
     System.out.println("""
+            \u001b[34;4;255m
        Welcome to the restaurant system!
        Who are you(1/2)?
        1)Staff
