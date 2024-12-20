@@ -4,7 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class basicMethodForStuff {
+public class basicMethodForStaff {
     Scanner scanner = new Scanner(System.in);
 
     /*
@@ -12,7 +12,7 @@ public class basicMethodForStuff {
      * This method provides options for the user to list the menu, add, delete dishes, print the menu, or exit
      * It uses a do-while loop to allow the user to repeatedly operate until they choose to exit
      */
-    public void stuffMethod() {
+    public void staffMethod() {
         String option = "";
         int choice;
         // Use a do-while loop to continuously display the menu until the user chooses to exit
